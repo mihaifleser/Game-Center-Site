@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head> 
+		<link rel = "stylesheet" href = "css/login.css">
+		<div class = "header">
+			Login <br><br>	
+		</div>
+	</head>
+	
+	<body> 
+		<div class = "body">
+			<form action="php/login.php" method = "post">
+				<label> Email: </label><br>
+				<input type= "text" id= "email" name= "email"><br><br>
+				<label> Password: </label><br>
+				<input type= "password" id= "password" name= "password">
+				<input type="checkbox" onclick="showPassword()">Show Password</input><br><br>
+				<input name= "submit" type= "submit" value = "Login"><br><br>  
+			</form>
+			
+			<a class = "SignUp" href = "signup.html" style="position: absolute; center: 0;"> SignUp </a>
+		</div>	
+		
+		
+	</body>
+	
+</html>
+
+<script>
+	
+	function showPassword() 
+	{
+		var inputText = document.getElementById("password");
+		
+		if (inputText.type === "password")
+			inputText.type = "text";
+		else
+			inputText.type = "password";
+	}
+	
+</script>

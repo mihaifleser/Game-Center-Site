@@ -1,0 +1,214 @@
+/*GLOBAL styles
+----------------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	color: #046865;
+	background: #041B15;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.menu {
+    background:#1Z1710;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:auto;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 5px 10px 10px 5px;
+}
+
+a:hover {
+    background: #7242f5;
+}
+
+login {
+	
+	margin-top: 10;
+}
+
+img {
+	width:300px;
+}
+a:hover{
+	background:#8D99AE;
+}
+
+
+.wrap{
+	margin:0 auto;
+	max-width: 800px;
+	width: 85%;
+	padding: 60px 0;
+}
+
+.button{
+	color: #51513D;
+	background:#0FA3B1;
+	padding:8px;
+	border: 1px solid blue;
+	display:inline-block;
+	margin:15px;
+	
+}
+
+/*primul p dupa h3*/
+h3 + p{
+	font-style: bold;
+	padding-bottom:15px;
+}
+
+/*toate p dupa h3*/
+h3 ~ p{
+	margin: 0;
+}
+
+.divider > section{     /*toti copiii seciune al dividerului*/
+	border-bottom: 1px dashed #1B2021;
+	padding: 25px 0;
+}
+.divider > section:last-of-type{
+	border-bottom: none;
+}
+
+
+
+/*HEADER
+----------------------------------------------------------------------*/
+header{
+	background:#1B2021;
+	color:#E3DCC2;
+}
+
+
+h1{
+	font-size: 100px;
+}
+h2{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 50px;
+}
+h1,h2{
+	margin: 0;
+}
+
+/*FOOTER
+----------------------------------------------------------------------*/
+
+footer{
+	background:#1B2021;
+	color:#E3DCC2;
+}
+.contact_list{
+	
+	list-style-type: none;
+	padding: 0;
+	flex-wrap: wrap;
+}
+.flex_item{
+	flex: 1 1 auto;
+	padding: 10px;
+	display:inline-block;
+}
+
+.tickImage {
+	
+	width: 32px;
+    height: 32px;
+}
+/*SECTION 1
+--------------------------------------------------------------------------------------------------*/
+
+.section1{
+	
+	text-align: center;
+	background:#51513D;
+	color:#E3DCC2;
+}
+.item {
+	overflow:hidden;
+}
+.item h3{
+	margin-top: 0;
+}
+
+/*SECTION 2
+----------------------------------------------------------------------*/
+
+.Login { 
+
+	margin-top: 10;
+	margin-right: 10;
+}
+
+.section2{
+	background: #8D99AE;
+	color: #1B2021;
+}
+
+
+/*section 3
+----------------------------------------------------------------------*/
+.section3{
+	background-image: url(../images/gaming4.jpg);
+	background-size: cover;
+	background-position: left;
+	color: #1B2021;
+	text-align: right;
+}
+
+/*responsive
+----------------------------------------------------------------------*/
+@media screen and (min-width: 700px){
+	header,footer{
+		text-align: center;
+	}
+	
+	.item img{
+	float: left;
+	margin-right:20px;
+	}
+	.pachet-item{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 20px;
+	}
+	.contact_list{
+		display: flex;
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 699px){
+	h1{
+	font-size: 60px;
+	margin-bottom: 15px;
+	}
+	
+	h2{
+	font-size: 30px;
+	}
+	h1,h2{
+		line-height: 1;
+	}
+}

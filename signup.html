@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head> 
+		<link rel = "stylesheet" href = "css/login.css">
+		<div class = "header">
+			Sign Up <br><br>	
+		</div>
+	</head>
+	
+	<body> 
+		<div class = "body">
+			<form action="php/signup.php" method = "post">
+				<label> email: </label><br>
+				<input type= "text" id= "email" name = "email"><br><br>
+				<label> name: </label><br>
+				<input type= "text" id= "name" name = "name"><br><br>
+				<label> password: </label><br>
+				<input type= "password" id= "password" name= "password" onchange = "checkPassword()">
+				<input type="checkbox" onclick="showPassword()">Show Password</input><br><br>
+				<label> repeat password: </label><br>
+				<input type= "password" id= "password2" name= "password2" onchange = "checkPassword()"><br><br>
+				<label> phone: </label><br>
+				<input type= "text" id= "phone" name= "phone"><br><br>
+				<input name= "submit" type= "submit" value = "Sign up"><br><br> 
+				<label id = "error" value = ""><br>				
+			</form>
+		</div>	
+	</body>
+	
+</html>
+
+<script>
+	
+	function showPassword() 
+	{
+		var inputText = document.getElementById("password");
+		var inputText2 = document.getElementById("password2");
+		
+		if (inputText.type === "password")
+		{
+			inputText.type = "text";
+			inputText2.type = "text";
+		}
+		else
+		{
+			inputText.type = "password";
+			inputText2.type = "password";
+		}
+	}
+	
+	function checkPassword() 
+	{
+		var inputText = document.getElementById("password");
+		var inputText2 = document.getElementById("password2");
+		var errorLabel = document.getElementById("error");
+		
+		if (inputText.value != inputText2.value)
+		{
+			errorLabel.innerHTML = "Password not correspond!";
+		}
+		else
+		{
+			errorLabel.innerHTML = "Password correspond!";
+		}
+	}
+	
+</script>

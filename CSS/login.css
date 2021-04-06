@@ -1,0 +1,19 @@
+.header {
+	font-size: 50px;
+	margin-top: 50;
+	text-align: center;
+}
+
+.body {
+	font-size: 24px;
+	margin-top: 100;
+	text-align: center;
+}
+
+input[type="text"] {
+    font-size:24px;
+}
+
+input[type="button"] {
+    font-size:24px;
+}
